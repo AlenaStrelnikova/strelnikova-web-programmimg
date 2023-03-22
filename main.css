@@ -9,16 +9,32 @@ header {
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
+    transition: 500ms 1s;
 }
-
+header:hover {
+    font-size: 20pt;
+    transition: 1s;
+}
+header:active {
+    color: black;
+    transition: 0,1s, 1s;
+}
 footer {
     background: linear-gradient(to right, red, orange, yellow, green, lightblue, blue, purple);
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
     text-align: right;
+    transition: 500ms 1s;
 }
-
+footer:hover {
+    transition: 1s;
+    font-size: 20pt;
+}
+footer:active {
+    color: black;
+    transition: 0,1s, 1s;
+}
 a {
     color: forestgreen;
     text-decoration: none;
