@@ -1,5 +1,5 @@
 body {
-    backgroung-color: lightblue;
+    background-color: lightblue;
     color: maroon;
     font-family: Arial;
     margin: 0px;
@@ -23,3 +23,21 @@ a {
     color: forestgreen;
     text-decoration: none;
 }
+
+a:visited {
+    color: maroon;
+    background-color: pink;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: white;
+    font-weight: bold;
+}
+
+a:active {
+    color: pink;
+    background-color: green;
+}
+
