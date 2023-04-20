@@ -56,6 +56,22 @@
             output.style.borderStyle = borderStyle;
             output.style.borderWidth = borderWidth;
         }
+        function Calculate() {
+            let input1 = document.getElementById('number1');
+            let input2 = document.getElementById('number2');
+            let input3 = document.getElementById('number3');
+            let input4 = document.getElementById('number4');
+            let input5 = document.getElementById('number5');
+            let cena = document.getElementById('cena');
+
+            let a = parseInt(input1.value);
+            let b = parseInt(input2.value);
+            let c = parseInt(input3.value);
+            let d = parseInt(input4.value);
+            let e = parseInt(input5.value);
+            let summ = a*100 + b*150 + c*50 + d*30 + e*80;
+            cena.innerHTML = 'Общая цена: ' + summ + ' рублей';
+        }
     </script>
     <style>
         .message {
@@ -72,11 +88,22 @@
             border-width: 1px;
         }
 
+        .Korzina {
+            width: 280px;
+            height: 420px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(158, 6, 6);
+            padding: 2px 20px 20px 20px;
+            border-radius: 10px;
+        }
+
         #output {
             border: 1px solid;
             width: 300px;
             height: 40px;
         }
+        
     </style>
 </head>
 
@@ -102,6 +129,21 @@
         </div>
 
         <div id="output"></div>
+        <br>
+
+        <div class="Korzina">
+        <h1>Корзина товаров</h1>
+        <label>Яблоки (100 р/шт):</label><br><input type="number" id="number1"><br><br>
+        <label>Апельсины (150 р/шт):</label><br><input type="number" id="number2"><br><br>
+        <label>Виноград (50 р/шт):</label><br><input type="number" id="number3"><br><br>
+        <label>Бананы (30 р/шт):</label><br><input type="number" id="number4"><br><br>
+        <label>Груши (80 р/шт):</label><br><input type="number" id="number5"><br><br>
+
+            <input type="button" value="Рассчитать" onclick="Calculate()">
+            <br><br>
+
+        <div id="cena"></div><br>
+        </div>
     </main>
 
     <footer onclick="showAuthor()">
