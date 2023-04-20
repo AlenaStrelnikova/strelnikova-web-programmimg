@@ -72,35 +72,8 @@
             let summ = a*100 + b*150 + c*50 + d*30 + e*80;
             cena.innerHTML = 'Общая цена: ' + summ + ' рублей';
         }
-        function Hide1() {
-            document.getElementById('circle1').hidden = true;
-        }
-        function Hide2() {
-            document.getElementById('circle2').hidden = true;
-        }
-        function Hide3() {
-            document.getElementById('circle3').hidden = true;
-        }
-        function Hide4() {
-            document.getElementById('circle4').hidden = true;
-        }
-        function Hide5() {
-            document.getElementById('circle5').hidden = true;
-        }
-        function Hide6() {
-            document.getElementById('circle6').hidden = true;
-        }
-        function Hide7() {
-            document.getElementById('circle7').hidden = true;
-        }
-        function Hide8() {
-            document.getElementById('circle8').hidden = true;
-        }
-        function Hide9() {
-            document.getElementById('circle9').hidden = true;
-        }
-        function Hide10() {
-            document.getElementById('circle10').hidden = true;
+        function Hide(num) {
+            document.getElementById('circle' + num).hidden = true;
         }
     </script>
     <style>
@@ -189,16 +162,16 @@
         <br>
 
         <div>
-            <input type="button" id='circle1' value="1" class="circle" style='color: rgb(141, 11, 11); left: 500px; background-color: rgb(203, 188, 218);' onclick="Hide1()">
-            <input type="button" id='circle2' value="2" class="circle" style='color: rgb(141, 11, 11); left: 560px; background-color: rgb(217, 253, 253);' onclick="Hide2()">
-            <input type="button" id='circle3' value="3" class="circle" style='color: rgb(141, 11, 11); left: 620px; background-color: rgb(239, 255, 167);' onclick="Hide3()">
-            <input type="button" id='circle4' value="4" class="circle" style='color: rgb(141, 11, 11); left: 680px; background-color: rgb(255, 180, 232);' onclick="Hide4()">
-            <input type="button" id='circle5' value="5" class="circle" style='color: rgb(141, 11, 11); left: 740px; background-color: rgb(255, 235, 121);' onclick="Hide5()">
-            <input type="button" id='circle6' value="6" class="circle" style='color: rgb(141, 11, 11); left: 800px; background-color: rgb(251, 149, 255);' onclick="Hide6()">
-            <input type="button" id='circle7' value="7" class="circle" style='color: rgb(141, 11, 11); left: 860px; background-color: rgb(233, 233, 233);' onclick="Hide7()">
-            <input type="button" id='circle8' value="8" class="circle" style='color: rgb(141, 11, 11); left: 920px; background-color: rgb(235, 236, 255);' onclick="Hide8()">
-            <input type="button" id='circle9' value="9" class="circle" style='color: rgb(141, 11, 11); left: 980px; background-color: rgb(198, 255, 211);' onclick="Hide9()">
-            <input type="button" id='circle10' value="10" class="circle" style='color: rgb(141, 11, 11); left: 1040px; background-color: rgb(219, 219, 219);' onclick="Hide10()">
+            <input type="button" id='circle1' value="1" class="circle" style='color: rgb(141, 11, 11); left: 500px; background-color: rgb(203, 188, 218);' onclick="Hide('1')">
+            <input type="button" id='circle2' value="2" class="circle" style='color: rgb(141, 11, 11); left: 560px; background-color: rgb(217, 253, 253);' onclick="Hide('2')">
+            <input type="button" id='circle3' value="3" class="circle" style='color: rgb(141, 11, 11); left: 620px; background-color: rgb(239, 255, 167);' onclick="Hide('3')">
+            <input type="button" id='circle4' value="4" class="circle" style='color: rgb(141, 11, 11); left: 680px; background-color: rgb(255, 180, 232);' onclick="Hide('4')">
+            <input type="button" id='circle5' value="5" class="circle" style='color: rgb(141, 11, 11); left: 740px; background-color: rgb(255, 235, 121);' onclick="Hide('5')">
+            <input type="button" id='circle6' value="6" class="circle" style='color: rgb(141, 11, 11); left: 800px; background-color: rgb(251, 149, 255);' onclick="Hide('6')">
+            <input type="button" id='circle7' value="7" class="circle" style='color: rgb(141, 11, 11); left: 860px; background-color: rgb(233, 233, 233);' onclick="Hide('7')">
+            <input type="button" id='circle8' value="8" class="circle" style='color: rgb(141, 11, 11); left: 920px; background-color: rgb(235, 236, 255);' onclick="Hide('8')">
+            <input type="button" id='circle9' value="9" class="circle" style='color: rgb(141, 11, 11); left: 980px; background-color: rgb(198, 255, 211);' onclick="Hide('9')">
+            <input type="button" id='circle10' value="10" class="circle" style='color: rgb(141, 11, 11); left: 1040px; background-color: rgb(219, 219, 219);' onclick="Hide1('10')">
         </div>
         <div class="shariki">
         </div>
