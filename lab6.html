@@ -16,6 +16,15 @@
             border-radius: 20px;
             border-color: green;
         }
+        .rules {
+            margin: 30px auto;
+            padding: 20px;
+            text-align: left;
+            width: 620px;
+            border-radius: 20px;
+            background-color: lightcyan;
+            color: green;
+        }
     </style>
     <script>
         let number;
@@ -61,6 +70,16 @@
             document.getElementById('user-number').value = '';
             document.getElementById('result').value = '';
         }
+        function show_rules(){
+            let rule_screens = document.getElementsByClassName('rules');
+            rule_screens[0].style.display = 'none';
+            rule_screens[1].style.display = 'block';
+        }
+        function hide_rules(){
+            let rule_screens = document.getElementsByClassName('rules');
+            rule_screens[1].style.display = 'none';
+            rule_screens[0].style.display = 'block';
+        }
     </script>
 </head>
 
@@ -96,6 +115,23 @@
             </div>
             <div>
                 <button onclick="again()">Сыграть еще раз</button>
+            </div>
+        </div>
+
+        <div class="rules">
+            <button onclick="show_rules()">Показать правила игры</button>
+        </div>
+
+        <div class="rules" style="display: none;">
+            <button onclick="hide_rules()">Скрыть правила игры</button>
+            <div>
+                <ol type="I">
+                    <li>Нажмите на кнопку "Сыграть в игру".</li>
+                    <li>Попробуйте угадать какое число загадал компьютер в диапазоне от 1 до 100.</li>
+                    <li>Введите число от 1 до 100 в окно и нажмите кнопку "Угадать".</li>
+                    <li>Если загаданное число больше, попробуйте выбрать число больше предыдущего. Если загаданное число меньше, выберите меньшее.</li>
+                    <li>Повторяйте до тех пор, пока не одержите победу.</li>
+                </ol>
             </div>
         </div>
     </main>
