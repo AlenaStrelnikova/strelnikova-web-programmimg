@@ -34,6 +34,23 @@
             border-color:brown;
             background-color: yellow;
         }
+        .click_me {
+            margin: 30px 30px 30px 30px;
+            text-align: center;
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            border-radius: 30px;
+            border-color: rgb(7, 7, 83);
+            border: 1px solid;
+            background-color:rgb(226, 135, 219);
+            color: rgb(30, 5, 87);
+            cursor: pointer;
+            font-size: 20px;
+            position: relative;
+            left: 0px;
+
+        }
     </style>
     <script>
         let number;
@@ -77,7 +94,7 @@
             count = 0;
             document.getElementById('try-count').innerHTML = '';
             document.getElementById('user-number').value = '';
-            document.getElementById('result').value = '';
+            document.getElementById('result').innerHTML = '';
         }
         function show_rules(){
             let rule_screens = document.getElementsByClassName('rules');
@@ -116,6 +133,12 @@
                 document.getElementById('color-name').innerHTML = 'желтый';
             }
         }
+        // function move(){
+        //     let move = document.getElementsByClassName('click_me');
+        //     if(div.style.left == '0px') { 
+        //         div.style.left = '300px';
+        //     }
+        // }
     </script>
 </head>
 
@@ -175,6 +198,10 @@
             Цвет: <span id="color-name">желтый</span><br>
             Сделайте двойной щелчок, чтобы сменить.
         </div>
+
+        <!-- <div class="click_me" ondblclick="move(this)">
+            <div>Щелкни меня</div>
+        </div> -->
     </main>
 
     <footer>
