@@ -49,7 +49,8 @@
             font-size: 20px;
             position: relative;
             left: 0px;
-
+            transition: 600ms 1s;
+            transform: rotate(0turn);
         }
     </style>
     <script>
@@ -133,12 +134,16 @@
                 document.getElementById('color-name').innerHTML = 'желтый';
             }
         }
-        // function move(){
-        //     let move = document.getElementsByClassName('click_me');
-        //     if(div.style.left == '0px') { 
-        //         div.style.left = '300px';
-        //     }
-        // }
+        function move(div){
+            if(div.style.left == 0 + 'px') { 
+                div.style.left = 1650 + 'px';
+                div.style.transform = 'rotate(4turn)';
+            }
+            else{ 
+                div.style.left = 0 + 'px';
+                div.style.transform = 'rotate(0turn)';
+            }
+        }    
     </script>
 </head>
 
@@ -199,9 +204,9 @@
             Сделайте двойной щелчок, чтобы сменить.
         </div>
 
-        <!-- <div class="click_me" ondblclick="move(this)">
+        <div class="click_me" onclick="move(this)">
             <div>Щелкни меня</div>
-        </div> -->
+        </div>
     </main>
 
     <footer>
