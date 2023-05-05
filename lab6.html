@@ -52,6 +52,13 @@
             transition: 600ms 1s;
             transform: rotate(0turn);
         }
+        .shiroki {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            background-color:rgb(188, 255, 214);
+            position: relative;
+        }
     </style>
     <script>
         let number;
@@ -144,6 +151,14 @@
                 div.style.transform = 'rotate(0turn)';
             }
         }    
+        function wide(div){
+            if(div.style.width == 1000 + 'px') {
+                div.style.width = 100 + 'px';
+            }
+            else{
+                div.style.width = div.offsetWidth + 50 + 'px';
+            } 
+        }
     </script>
 </head>
 
@@ -207,6 +222,8 @@
         <div class="click_me" onclick="move(this)">
             <div>Щелкни меня</div>
         </div>
+
+        <div class="shiroki" onclick="wide(this)"></div>
     </main>
 
     <footer>
