@@ -72,8 +72,17 @@
                 else ball.style.backgroundColor = 'red';
                 result.appendChild(ball);
             }
-
         }
+
+        function multiplic() {
+            let line = document.getElementById('table');
+            for(let i=13; i<34; i++) {
+                let new_line = document.createElement('div');
+                new_line.innerHTML = i + ' * 44 =' + (i*44);
+
+                line.appendChild(new_line);
+        }
+    }
     </script>
 </head>
 <body>
@@ -95,6 +104,9 @@
         <label>Введите число: <input type="number" value="5" id="number" placeholder="Введите число кругов"></label><br> 
         <button onclick="click_on()">Красное/зеленое</button>
         <div id="result"></div>
+
+        <button onclick="multiplic()">Таблица умножения на 44</button>
+        <div id="table"></div>
 
     </main>
 
