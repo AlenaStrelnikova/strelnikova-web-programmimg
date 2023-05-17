@@ -55,11 +55,21 @@
             let result = document.getElementById('result');
             let number = document.getElementById('number');
             let circle_num = parseInt(number.value);
-            for(let i=circle_num; i>=0; i=i-1) {
+            for(let i=circle_num; i>=1; --i) {
                 let ball =  document.createElement('div');
-                ball.innerHTML = circle_num;
-                ball.style.width = '50px';
-                ball.style.borderBlockStyle = '2px solid';
+                ball.innerHTML = i;
+                ball.style.width = '60px';
+                ball.style.height = '60px';
+                ball.style.borderRadius = '40px';
+                ball.style.textAlign = 'center';
+                ball.style.margin = '10px';
+                ball.style.lineHeight = '60px';
+                ball.style.fontSize = '25px';
+                ball.style.color = 'white';
+                if(i % 2 == 0){
+                    ball.style.backgroundColor = 'green';
+                }
+                else ball.style.backgroundColor = 'red';
                 result.appendChild(ball);
             }
 
