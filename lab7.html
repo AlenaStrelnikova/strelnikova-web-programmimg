@@ -39,6 +39,17 @@
             let average = sum / exchange.length;
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
         }
+
+        function addTransparentBlocks() {
+            let tr_blocks = document.getElementById('transparent-blocks');
+            for(let i = 0; i < 10; i++) {
+                let tr_block = document.createElement('div');
+                tr_block.innerHTML = 'Блок №' + (i + 1);
+                tr_block.style.opacity = (i/10) + 0.1;
+
+                tr_blocks.appendChild(tr_block);
+            }
+        }
     </script>
 </head>
 <body>
@@ -53,6 +64,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
+        <div id="transparent-blocks"></div>
     </main>
 
     <footer>
