@@ -50,6 +50,20 @@
                 tr_blocks.appendChild(tr_block);
             }
         }
+
+        function click_on() {
+            let result = document.getElementById('result');
+            let number = document.getElementById('number');
+            let circle_num = parseInt(number.value);
+            for(let i=circle_num; i>=0; i=i-1) {
+                let ball =  document.createElement('div');
+                ball.innerHTML = circle_num;
+                ball.style.width = '50px';
+                ball.style.borderBlockStyle = '2px solid';
+                result.appendChild(ball);
+            }
+
+        }
     </script>
 </head>
 <body>
@@ -67,6 +81,11 @@
 
         <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
         <div id="transparent-blocks"></div>
+
+        <label>Введите число: <input type="number" value="5" id="number" placeholder="Введите число кругов"></label><br> 
+        <button onclick="click_on()">Красное/зеленое</button>
+        <div id="result"></div>
+
     </main>
 
     <footer>
