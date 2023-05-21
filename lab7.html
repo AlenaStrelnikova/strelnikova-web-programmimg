@@ -81,8 +81,51 @@
                 new_line.innerHTML = i + ' * 44 =' + (i*44);
 
                 line.appendChild(new_line);
+            }
         }
-    }
+
+        function Show_stock_price() {
+            let stocks = [['03.05.2023', '04.05.2023', '05.05.2023', '08.05.2023', '10.05.2023',
+                        '11.05.2023', '12.05.2023', '15.05.2023', '16.05.2023', '17.05.2023'],
+                        [68.00, 68.04, 68.00, 67.60, 67.78, 68.22, 67.92, 68.72, 68.30, 68.20]];
+            let table = document.getElementById('Stock_price');
+            for(let i = 0; i < 10; i++) {
+                let tr = document.createElement('tr');
+            for(let j = 0; j < stocks.length; j++) {
+                let td = document.createElement('td');
+                td.innerHTML = stocks[j][i];
+                tr.appendChild(td);
+                }
+            // Создание 3 колонки для расчета разницы
+            let td2 = document.createElement('td');
+            for(let k = 0; k < stocks.length; k++) {
+                td2_ = stocks[1][i] - stocks[1][i-1];
+                if (isNaN(td2_)) {
+                    td2.innerHTML = '-';
+                }
+                else {
+                    td2.innerHTML = td2_.toFixed(2);
+                }
+                tr.appendChild(td2); 
+                } 
+            table.appendChild(tr);
+            }
+
+            let sum = 0;
+            for(let i = 0; i < 10; i++) {
+                sum = sum + stocks[1][i];
+            }
+            let average1 = sum / stocks[1].length;
+            document.getElementById('price1').innerHTML = 'Среднее значение: ' + average1;
+
+            let max = Math.max.apply(null, stocks[1])
+            document.getElementById('price2').innerHTML = 'Максимальное значение: ' + max;
+
+            let min = Math.min.apply(null, stocks[1])
+            document.getElementById('price3').innerHTML = 'Минимальное значение: ' + min;
+
+        }  
+    
     </script>
 </head>
 <body>
@@ -108,6 +151,11 @@
         <button onclick="multiplic()">Таблица умножения на 44</button>
         <div id="table"></div>
 
+        <button onclick="Show_stock_price()">Курс акций компании "Детский мир"</button>
+        <table border="1" id="Stock_price"></table>
+        <div id="price1"></div>
+        <div id="price2"></div>
+        <div id="price3"></div>
     </main>
 
     <footer>
