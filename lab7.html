@@ -7,7 +7,9 @@
     <title>Стрельникова Алёна Александровна. Лабораторная 7</title>
     <link rel="stylesheet" href="main.css">
     <style>
-
+        main {
+            margin-bottom: 70px;
+        }
     </style>
     <script>
         function addBlocks() {
@@ -91,24 +93,24 @@
             let table = document.getElementById('Stock_price');
             for(let i = 0; i < 10; i++) {
                 let tr = document.createElement('tr');
-            for(let j = 0; j < stocks.length; j++) {
-                let td = document.createElement('td');
-                td.innerHTML = stocks[j][i];
-                tr.appendChild(td);
+                for(let j = 0; j < stocks.length; j++) {
+                    let td = document.createElement('td');
+                    td.innerHTML = stocks[j][i];
+                    tr.appendChild(td);
                 }
-            // Создание 3 колонки для расчета разницы
-            let td2 = document.createElement('td');
-            for(let k = 0; k < stocks.length; k++) {
-                td2_ = stocks[1][i] - stocks[1][i-1];
-                if (isNaN(td2_)) {
-                    td2.innerHTML = '-';
-                }
-                else {
-                    td2.innerHTML = td2_.toFixed(2);
-                }
-                tr.appendChild(td2); 
+                // Создание 3 колонки для расчета разницы
+                let td2 = document.createElement('td');
+                for(let k = 0; k < stocks.length; k++) {
+                    td2_ = stocks[1][i] - stocks[1][i-1];
+                    if (isNaN(td2_)) {
+                        td2.innerHTML = '-';
+                    }
+                    else {
+                        td2.innerHTML = td2_.toFixed(2);
+                    }
+                    tr.appendChild(td2); 
                 } 
-            table.appendChild(tr);
+                table.appendChild(tr);
             }
 
             let sum = 0;
