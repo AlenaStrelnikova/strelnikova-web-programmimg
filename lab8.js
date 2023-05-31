@@ -24,3 +24,21 @@ function showDate() {
     out6.innerHTML = 'Дата и время для китайской локали: ' + today6.toLocaleString('zh');
     
 }
+
+function showDaysCount() {
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]');
+    let birthday = new Date(inputDate.value);
+    let daysCount = (today - birthday)/1000/60/60/24;
+    daysCount = Math.floor(daysCount);
+    let Count_Days = document.getElementById('Count_Days');
+    Count_Days.innerHTML = "Количество дней с даты рождения: " + daysCount;
+}
+
+function clear_date() {
+    let inputDate = document.querySelector('input[type=date]');
+    let Count_Days = document.getElementById('Count_Days');
+
+    inputDate.value = '';
+    Count_Days.innerHTML = '';
+}

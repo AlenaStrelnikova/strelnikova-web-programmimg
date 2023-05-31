@@ -14,6 +14,26 @@
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         line-height: 2;
     }
+    .birtday_out {
+        color:rgb(46, 147, 12);
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        line-height: 2;
+    }
+    .birtday_button {
+        color:rgb(16, 132, 43);
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+        line-height: 2;
+        border-radius: 15px;
+        border: solid 1px;
+    }
+    .birthday_in {
+        color:rgb(46, 147, 12);
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        line-height: 2;
+    }
     </style>
 </head>
 <body onload="showDate()">
@@ -28,6 +48,17 @@
         <div id="current-date4" class="dates"></div>
         <div id="current-date5" class="dates"></div>
         <div id="current-date6" class="dates"></div>
+
+        <div><br>
+            <label style="color:green;  font-weight: 600;">Дата рождения: <input type='date' class="birthday_in"></label>
+        </div>
+        <div><br>
+            <button onclick="showDaysCount()" class="birtday_button">Показать число дней</button>
+        </div>
+        <div id="Count_Days" class="birtday_out"></div>
+        <div><br>
+            <button onclick="clear_date()" class="birtday_button">Очистить данные</button>
+        </div>
     </main>
 
     <footer>
